@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
+use App\Livewire\FirstComponent;
+use App\Livewire\BirdComponent;
 
 Route::get('/', function () {
     return view('welcome');
@@ -15,7 +17,8 @@ Route::view('dashboard', 'dashboard')
 
 Route::middleware(['auth'])->group(function () {
 
-    Route::get('/first', App\Livewire\FirstComponent::class)->name('first');
+    Route::get('/first', FirstComponent::class)->name('first');
+    Route::get('/bird', BirdComponent::class)->name('bird');
     
     Route::redirect('settings', 'settings/profile');
 
