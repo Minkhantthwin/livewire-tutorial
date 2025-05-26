@@ -18,7 +18,7 @@ Route::view('dashboard', 'dashboard')
 Route::middleware(['auth'])->group(function () {
 
     Route::get('/first', FirstComponent::class)->name('first');
-    Route::get('/bird', BirdComponent::class)->name('bird');
+    // Route::get('/bird', BirdComponent::class)->name('bird');
     
     Route::redirect('settings', 'settings/profile');
 
